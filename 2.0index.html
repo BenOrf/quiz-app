@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Quizzly</title>
+</head>
+<body>
+    <header>
+      <h1>Quiz Fight</h1>
+    </header>
+    <main class="main">
+        <section class="card">
+            <img src="images/icon-marked.svg" alt="" class="card__img">
+            <h2 class="card-headline">Wer ist der beste Harry Potter Carakter?</h2>
+            <button class="card__btn" onclick="toggleAnswer(this.id)" id="button-1">Antwort</button>
+            <p class="hiddenText card__text" id="hidden-text-1">Serverus Snape</p>
+            <ul class="badges">
+                <li class="badges__items"><span class="badges__items__dot primary-color"></span>Leben</li>
+                <li class="badges__items"><span class="badges__items__dot secondary-color"></span>Wissen</li>
+                <li class="badges__items"><span class="badges__items__dot fourth-color"></span>Filme</li>
+            </ul>
+        </section>
+        <section class="card">
+            <img src="images/icon-marked.svg" alt="" class="card__img">
+            <h2 class="card-headline">Wer ist genau so witzig wie ich?</h2>
+            <button class="card__btn" onclick="toggleAnswer(this.id)" id="button-2">Antwort</button>
+            <p class="hiddenText card__text" id="hidden-text-2">Keiner!</p>
+            <ul class="badges">
+                <li class="badges__items"><span class="badges__items__dot fifth-color"></span>witzig</li>
+                <li class="badges__items"><span class="badges__items__dot third-color"></span>Unnötig</li>
+                <li class="badges__items"><span class="badges__items__dot fourth-color"></span>Dulle Mist</li>
+            </ul>
+        </section>
+        <section class="card">
+            <img src="images/icon-marked.svg" alt="" class="card__img">
+            <h2 class="card-headline">Welcher Ort ist der schönste im Westerwald?</h2>
+            <button class="card__btn" onclick="toggleAnswer(this.id)" id="button-3">Antwort</button>
+            <p class="hiddenText card__text" id="hidden-text-3">Aber sowas von Oberelbert</p>
+            <ul class="badges">
+                <li class="badges__items"><span class="badges__items__dot fourth-color"></span>Kirmes</li>
+                <li class="badges__items"><span class="badges__items__dot third-color"></span>Feiern</li>
+                <li class="badges__items"><span class="badges__items__dot fifth-color"></span>Wissen</li>
+            </ul>
+        </section>
+    </main>
+    <footer></footer>
+    <script>
+        function toggleAnswer(clicked_id) {
+            let text;
+            
+            if (document.querySelector('.hiddenText') && clicked_id === 'button-1') {
+                text = document.querySelector('#hidden-text-1').classList.toggle('visibleText');
+            } else if (document.querySelector(".hiddenText") && clicked_id === "button-2") {
+                text = document.querySelector('#hidden-text-2').classList.toggle('visibleText');
+            } else if (document.querySelector(".hiddenText") && clicked_id === "button-3") {
+                text = document.querySelector('#hidden-text-3').classList.toggle('visibleText');
+            }
+        }
+
+        let markedQuestions = [];
+        markedQuestions.push({'01': 'Fabian Hanso'},{'02': 'Der Meister'});
+        console.log(markedQuestions);
+    </script>
+</body>
+</html>
