@@ -1,7 +1,10 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .main {
     width: 100%;
-    padding: 20px 20px 20px 20px;
-    margin-top: 72px;
+    margin-top: 15vh;
     margin-bottom: 60px;
     height: auto;
 }
@@ -28,7 +31,7 @@ header {
 
 
 .card {
-    width: 100%;
+    width: 95%;
     height: auto;
     background-color: #fff;
     border-radius: 20px;
@@ -36,11 +39,14 @@ header {
     /* border-style: dashed; */
     box-shadow: 0px 0px 10px #dedede;
     margin-bottom: 20px;
-    padding: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    position: relative;
 }
 
 .card__img {
@@ -120,7 +126,7 @@ header {
     list-style-type: none;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 65%;
 }
 
 .input__items {
@@ -129,7 +135,7 @@ header {
 }
 
 .input__title-field {
-    width: 100%;
+    width: 65%;
     border: 1px solid #3d3d3d;
     padding: 10px;
     border-radius: 10px;
@@ -180,18 +186,6 @@ footer > a:active {
     background-color: #f1f1f1;
 }
 
-footer > a > img {
-    height: 25px;
-}
-
-
-
-
-
-
-
-
-
 
 .primary-color {
     background-color: var(--primary-color);
@@ -212,3 +206,20 @@ footer > a > img {
 .fifth-color {
     background-color: var(--fifth-color);
 }
+
+.bookmark {
+        box-sizing: border-box; 
+        -moz-box-sizing: border-box; 
+        -webkit-box-sizing: border-box; 
+        position: absolute;
+        top: -10px; 
+        right: 18px;
+        height: 30px; 
+        width: 15px; 
+        padding: 0px; 
+        -webkit-transform: rotate(0deg) skew(0deg); 
+        transform: rotate(0deg) skew(0deg); 
+        border-left: 10px solid #2e778e; 
+        border-right: 10px solid #2e778e; 
+        border-bottom: 10px solid transparent; 
+    }
