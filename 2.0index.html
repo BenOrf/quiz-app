@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="answer.html"></script>
+    <script src="pencil.html"></script>
+    <script src="bookmarks.html"></script>
+    <script src="javascript.js"></script>
     <title>Quiz Fight</title>
+
 </head>
 <body>
     <header>
@@ -19,7 +22,7 @@
         <section class="card">
             <div class="bookmark"></div>
             <img src="images/icon-marked.svg" alt="" class="card__img">
-            <h2 class="card-headline">Wer ist der beste Harry Potter Carakter?</h2>
+            <h2 class="card-headline">Wer ist der beste Harry Potter Charakter?</h2>
             <button class="card__btn" onclick="toggleAnswer(this.id)" id="button-1">Antwort</button>
             <p class="hiddenText card__text" id="hidden-text-1">Serverus Snape</p>
             <ul class="badges">
@@ -54,10 +57,10 @@
         </section>
     </main>
     <footer class="footer">
-        <a href="" class="footer__link"><img src="icons/home-variant.svg" alt=""></a>
-        <a href="" class="footer__link active"><img src="icons/bookmark.svg" alt=""></a>
-        <a href="" class="footer__link"><img src="icons/pencil.svg" alt=""></a>
-        <a href="" class="footer__link"><img src="icons/account.svg" alt=""></a>
+        <a href="" id="home-button" class="footer__link"><img src="icons/home-variant.svg" alt=""></a>
+        <a href="" id= "bookmark-button" class="footer__link active"><img src="icons/bookmark.svg" alt=""></a>
+        <a href="" id="pencil-button" class="footer__link"><img src="icons/pencil.svg" alt=""></a>
+        <a href="" id="account-button" class="footer__link"><img src="icons/account.svg" alt=""></a>
     </footer>
     <script>
         function toggleAnswer(clicked_id) {
@@ -71,6 +74,8 @@
                 text = document.querySelector('#hidden-text-3').classList.toggle('visibleText');
             }
         }
+
+        alertOnHome();
 
 
     </script>
