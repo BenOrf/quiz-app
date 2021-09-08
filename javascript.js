@@ -27,4 +27,4 @@ toggleBookmark.addEventListener('click', () => {
 
 toggleBookmark.addEventListener('click', () => {
     toggleBookmarkSix.classList.toggle('bookmarked')
-})
+}) 
